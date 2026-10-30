@@ -26,7 +26,7 @@ def ask(question: str) -> str:
     response = client.models.generate_content(model=MODEL, contents=question)
 
     usage = response.usage_metadata
-    print(f"[tokens] 入力 {usage.prompt_token_count} / 出力 {usage.candidates_token_count}")
+    print(f"[tokens] input {usage.prompt_token_count} / output {usage.candidates_token_count}")
 
     return response.text
 
